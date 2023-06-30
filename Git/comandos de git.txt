@@ -29,6 +29,7 @@ de nuestro GIT.
  *git status :para ver los archivos en el repositorio pu
  *git add <nombre del archivo> para agregarlo al repositorio y darle seguimiento.
  *git commit -m <comentario del commit> agremamos de stage la rama el archivo
+ *git revert <etiqueta del commit> para revertir los cambios hasta el commit elegido 
  *git push -u origin(repositorio remoto) master<nombre de la rama> agregamos el archivo a github
  *git pull --allow-unrelated-histories <repositorio> <rama> sirve para agregar el seguimiento remoto desde otra pc
  *git config user.password <token de github> no compartir el token
