@@ -66,6 +66,7 @@ tambien podemos clonar repositorios remotos a nuestro local.
   NOTA:lo ideal es que de la rama main se saque una rama para los develops
   y de la rama de los devs ramas personales y hacer merge con develops
   una vez tener una version estable hacer merge con la rama master
+ link de refuerzo:https://www.youtube.com/watch?v=8Ay_gSQlL5s&t=1046s
 
 
 
