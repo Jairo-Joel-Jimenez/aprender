@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estructuracion2html</title>
+</head>
+<body>
+  <header>
+    <h1>Estructuracion2</h1>
+    <time datetime="2023-06-19">pulicado el 19-06-2023</time>
+    <hr>
+  </header>
+  <nav>
+    <a href="estructuracion2.html" target="_self">Principal</a> | <!-- etiqueta <a> Este elemento crea un enlace. El texto o la imagen que representa el enlace se 
+                                           incluye entre las etiquetas de apertura y cierre. El elemento incluye el atributo href para especificar la URL del enlace. -->
+    <a href="fotos.html" target="_self">Fotos</a> | 
+    <a href="videos.html" target="_self">Videos</a> | 
+    <a href="contacto.html" target="_self">Contacto</a> 
+    <hr>
+  </nav>
+  <main>
+  <section>
+    <article>
+      <h2>Texto con etiqueta pre</h2><!--etiqueta pre es igual a p solo que esta toma los saltos de lineas y espacios de tab-->
+      <pre>
+        La muerte es una quimera: porque mientras <mark>existo</mark> ,no existe la muerte;
+        y cuando existe la muerte,ya no existo yo.
+        <cite>Epicuro de Samos</cite>
+      </pre>
+      <br><!--sirve para hacer saltos de lineas-->
+      <h2>Texto con etiqueta p y br para salto de linea</h2>
+      <p><!--aqui hacemos uso de la etiqueta br para colocar saltos de linea-->
+        La muerte es una <em>quimera</em>: porque mientras yo existo,no existe la <i>muerte;</i><br>
+        y cuando existe la <i>muerte</i>,<strong>ya no existo yo</strong> .<br>
+        Epicuro de Samos
+      </p>
+      <!-- <em> texto cursiva
+           <strong> texto negrita
+           <i>para señalar idea o pensamiento por defecto es cursiva
+           <u>texto subrayado
+           <b>remarcar importancia por defecto en negrita 
+           <mark>—Este elemento resalta texto que es relevante en las circunstancias actuales (por ejemplo, términos que busca el usuario). 
+           <small>—Este elemento representa letra pequeña, como declaraciones legales, descargos, etc. 
+           <cite>—Este elemento representa el autor o título de una obra, como un libro, una película, etc. 
+           <address>—Este elemento representa información de contacto. Se implementa con frecuencia dentro de los pies de página para definir la dirección de la empresa o el sitio web.
+           <time>—Este elemento representa una fecha en formato legible para el usuario. Incluye el atributo datetime para especificar un valor en formato de ordenador y el
+                        atributo pubdate, el cual indica que el valor asignado al atributo datetime representa la fecha de publicación. 
+            <code>—Este elemento representa código de programación. Se usa en conjunto con el 
+            elemento <pre> para presentar código de programación en el formato original. 
+            <data>—Este elemento representa datos genéricos. Puede incluir el atributo value para 
+            especificar el valor en formato de ordenador (por ejemplo, <data value="32">Treinta y Dos</data>).-->
+    </article>
+  </section>
+  <aside></aside>
+  </main>
+  <footer>
+    <address>Tucuman, Argentina</address> 
+    <a href="https://www.google.com.ar" target="_blank">google</a>
+    <br>
+    <small>&copy; Derechos Reservados 2016</small> 
+    <small>&copy; 2016 <a href="http://www.jdgauchat.com" target="_blank">J.D Gauchat</a></small> <!--se usa target="_blank" para abrir en una ventana nueva y self para la misma ventana-->
+  </footer>
+  
+</body>
+</html>
+<!-- El elemento <a> puede incluir el atributo target para especificar el destino en el cual el 
+documento será abierto. El valor _self se asigna por defecto, lo que significa que el documento 
+se abre en la misma ubicación que el documento actual (el mismo recuadro o ventana). Otros 
+valores son _blank (el documento se abre en una nueva ventana), _parent (el documento se 
+abre en el recuadro padre), y _top (el documento se abre en la ventana actual). 
+ Como veremos más adelante, los documentos se pueden abrir en recuadros insertados 
+dentro de otros documentos. El valor del atributo target considera esta jerarquía de 
+recuadros, pero debido a que los recuadros no se usan de forma frecuente en sitios web 
+modernos, los dos valores más comunes son _self, para abrir el documento en la misma 
+ventana, y _blank, para abrir el documento en una nueva -->
