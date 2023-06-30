@@ -52,7 +52,20 @@ tambien podemos clonar repositorios remotos a nuestro local.
   *touch "nombre del archivo con extension" crea archivos
   *git diff<primerarama><segundarama> :sirve para ver las diferencias entre ramas 
    el orden de las ramas las compara al reves se sagile con q
-  *git merge <rama><master/main> :unifica una rama con la rama principal
+  *git merge <rama1><rama2> :unifica una rama1 con la rama2
+  *****como trabajar en equipos****
+  usar la modalidad de git flow es una buena alternativa
+  Aqui se considerara lo basico
+  Crear ramas en github
+  Agregar el colaborador al proyecto
+  git clone <url del directorio> para clonar el directorio
+  git fetch para ver las ramas que se agregaron al repositorio
+  git checkout <rama> para posicionarse en la rama
+  git pull para descargar los cambios de las demas ramas antes de cualquier merge
+  git merge <rama1><rama2> unifica una rama1 con la rama2
+  NOTA:lo ideal es que de la rama main se saque una rama para los develops
+  y de la rama de los devs ramas personales y hacer merge con develops
+  una vez tener una version estable hacer merge con la rama master
 
 
 
