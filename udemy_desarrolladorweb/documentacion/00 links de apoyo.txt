@@ -4,3 +4,5 @@ Pagina de fuentes google fonts:
 https://fonts.google.com/
 Normalizador de css:
 http://necolas.github.io/normalize.css/
+responsively para media queries:+
+https://responsively.app/
