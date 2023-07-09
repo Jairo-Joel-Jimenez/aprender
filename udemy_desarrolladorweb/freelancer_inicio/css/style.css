@@ -3,11 +3,20 @@ los elementos padres
 rem sirve para hacer responsive los tamaños de los elementos ya que hace a diferencia de em
 toma el valor relativo y no duplica los valores de etiquetas padres*/
 /*ver selectores*/
+:root {/*Es conocido como seudo-elemento sirve para declarar variables en css no existe en html*/
+--blanco: #ffffff; /*con -- defino el color en esta ocacion en hexadecimal*/
+--negro: #212121;
+--morado:#51557E;
+--lila:#816797;
+--amarillo:#FFC107;
+
+}
 html {
     font-size: 62.5%;
 }
 body{
     font-size: 16px;/*1rem=10px*/
+    font-family: 'Krub', sans-serif; /*cambio la fuente de toda la pagina si la coloco aqui*/
 }
 /*Las dos lineas de arriba sirven para hacer el uso de la propiedad rem mas facil*/
 /*class sirve como selector de un stilo de css en el css este se coloca con un ."nombre del selector class"*/
@@ -17,6 +26,46 @@ body{
     text-align: center; /*text-align sirve para alinear el elemento*/
     font-size: 3.8rem;
 }
+/*el codigo es mas especifico por lo que para el css tendra mas prioridad en la cascada
+a eso se lo denomina especifidad*/
+h1.titulo span {/*ya no es recomendable usar px como propiedad sino en su lugar rem*/
+    font-size: 2rem; /*font-size sirve para darle un tamaño a la fuente*/
+    
+
+}
 .titulo span {/*ya no es recomendable usar px como propiedad sino en su lugar rem*/
     font-size: 2rem; /*font-size sirve para darle un tamaño a la fuente*/
+    
+
+}
+.nav-bg{
+background-color: var(--morado);
+}
+.navegacion_principal {
+    display: flex; /*Esto nos habilita flexbox .siempre hay que ir al elemento padre de lo que queremos alinear*/
+    flex-direction:row ;/*sirve para darle direccion a la flexbox row para fila(horizontal) o column para columna(vertical) */
+    justify-content: space-between ;/*nos permite mover el contenido horizontalmente*/
+    /*align-items:normal; sirveria para centrar la flex si es una columna*/
+}
+.navegacion_principal a {/*aqui uso el selector para los links*/
+    color:var(--blanco);
+    text-decoration: none; /*text sirve para hacer modificaciones en la fuente en este caso lo usamos para eliminar las lineas que aparecen abajo de los enlaces*/
+    font-size: 2rem;
+    font-weight:bold ;/*sirve para hacer la fuente negrita*/
+    padding: 1rem;
+}
+.navegacion_principal a:hover{/*es el disparador que hace que cambie los enlaces al pasar por encima*/
+    background-color:var(--amarillo);
+    padding: 1rem;/*pading es como margin pero este expande hacia dentro ideal para barras*/
+    color: var(--negro);
+
+}
+.contenedor {/*sirve para centrar*/
+    width: 120rem;
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin: 0 auto 0 auto;esto es lo mismo de arriba y el orden va como las agujas del reloj*/
+    margin: 0 auto;/*es lo mismo que todo lo de arriba pero mas simplificado*/
 }

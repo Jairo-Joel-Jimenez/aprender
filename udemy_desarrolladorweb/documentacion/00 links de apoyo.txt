@@ -1,0 +1,6 @@
+Especificacion de css
+https://codigoconjuan.com/que-es-y-como-funciona-la-especificidad-en-css/
+Pagina de fuentes google fonts:
+https://fonts.google.com/
+Normalizador de css:
+http://necolas.github.io/normalize.css/

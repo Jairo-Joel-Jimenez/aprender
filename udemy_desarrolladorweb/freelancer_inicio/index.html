@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diseñador freelancer</title>
-  <link rel="reload" href="css/style.css" as="style" /> <!--rel=reload hace que carge la hoja de estilos lo mas antes posible-->
+  <link rel="preload" href="css/normalize.css" as="style" />
+  <link rel="stylesheet" href="css/normalize.css"/><!--normalize ayuda a que los navegadores interprete bien el html-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">  
+  <link rel="preload" href="css/style.css" as="style" /> <!--rel=reload hace que carge la hoja de estilos lo mas antes posible-->
   <link href="css/style.css" rel="stylesheet"/> <!--rel indica la relacion del documento enlazado con el actual-->
   
 </head>
@@ -12,14 +17,17 @@
   <header>
     <h1 class="titulo">Joel Jimenez <span>freelancer</span></h1>
   </header>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="Nosotros.html">Nosotros</a>
-    <a href="#">Clientes</a><!--href="#" sirve para indicar que ahi tendra un enlace-->
-    <a href="#">Contacto</a>
-  </nav>
+  <div class="nav-bg">
+    <nav class="navegacion_principal contenedor">
+      <a href="index.html">Inicio</a>
+      <a href="Nosotros.html">Nosotros</a>
+      <a href="#">Clientes</a><!--href="#" sirve para indicar que ahi tendra un enlace-->
+      <a href="#">Contacto</a>
+    </nav>
+  </div>
+  
   <section>
-    <h2 class="titulo">Diseño y Desarrollo web freelancer</h2>
+    <h2 class="titulo">Diseño y Desarrollo web <span>freelancer</span></h2>
     <p>San Miguel de Tucuman,Argentina</p>
     <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#FFC95F" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -103,8 +111,8 @@
     </form>
   </section>
   <footer>
-     <small>&copy;Todos los derechos reservados-Joel Jimenez freelancer</small>
+    <small>&copy;Todos los derechos reservados-Joel Jimenez freelancer</small>
   </footer>
- 
+
 </body>
 </html>
