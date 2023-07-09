@@ -1,0 +1,22 @@
+/*em 1em=16px sirve para hacer responsive los tamaños de los elementos pero los hijos duplica
+los elementos padres
+rem sirve para hacer responsive los tamaños de los elementos ya que hace a diferencia de em
+toma el valor relativo y no duplica los valores de etiquetas padres*/
+/*ver selectores*/
+html {
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;/*1rem=10px*/
+}
+/*Las dos lineas de arriba sirven para hacer el uso de la propiedad rem mas facil*/
+/*class sirve como selector de un stilo de css en el css este se coloca con un ."nombre del selector class"*/
+/*id sirve como selector de un stilo de css en el css este se coloca con un #"nombre del selector id"*/
+/*se recomienda hacer mas uso de class que de id para no afectar la espicifidad de cssS*/
+.titulo {
+    text-align: center; /*text-align sirve para alinear el elemento*/
+    font-size: 3.8rem;
+}
+.titulo span {/*ya no es recomendable usar px como propiedad sino en su lugar rem*/
+    font-size: 2rem; /*font-size sirve para darle un tamaño a la fuente*/
+}
