@@ -20,7 +20,7 @@ body{
 }
 /*Las dos lineas de arriba sirven para hacer el uso de la propiedad rem mas facil*/
 /*class sirve como selector de un stilo de css en el css este se coloca con un ."nombre del selector class"*/
-/*id sirve como selector de un stilo de css en el css este se coloca con un #"nombre del selector id"*/
+/*id sirve como selector de un stilo de css en el css este se coloca con un #"nombre del selector id" a diferencia de class los id no pueden repetirse es mala practica*/
 /*se recomienda hacer mas uso de class que de id para no afectar la espicifidad de cssS*/
 .titulo {
     text-align: center; /*text-align sirve para alinear el elemento*/
@@ -45,6 +45,7 @@ background-color: var(--morado);
     display: flex; /*Esto nos habilita flexbox .siempre hay que ir al elemento padre de lo que queremos alinear*/
     flex-direction:column ;/*sirve para darle direccion a la flexbox row para fila(horizontal) o column para columna(vertical) */
     /*align-items:normal; sirveria para centrar la flex si es una columna*/
+    align-items: center;
 }
 @media (min-width: 768px) {/*con @media  indico desde que resolucion en adelante hay cambios*/
     .navegacion_principal{
@@ -79,4 +80,10 @@ background-color: var(--morado);
     margin-left: auto;
     margin: 0 auto 0 auto;esto es lo mismo de arriba y el orden va como las agujas del reloj*/
     margin: 0 auto;/*es lo mismo que todo lo de arriba pero mas simplificado*/
+}
+
+.hero{
+    background-image:url(../img/hero.jpg) ; /*Sirve para colocar una imagen de fondo en el contenedor */
+    background-repeat: no-repeat; /*sirve para que la imagen del fondo no se repita si no abarca toda la pantalla*/
+    background-size:cover ;/*sirve para que la imagen tome todo el espacio posible*/
 }
