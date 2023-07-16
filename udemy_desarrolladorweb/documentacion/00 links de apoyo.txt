@@ -6,3 +6,5 @@ Normalizador de css:
 http://necolas.github.io/normalize.css/
 responsively para media queries:+
 https://responsively.app/
+Documentacion de box model:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
