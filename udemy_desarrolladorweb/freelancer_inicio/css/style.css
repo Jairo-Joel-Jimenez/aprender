@@ -9,11 +9,15 @@ toma el valor relativo y no duplica los valores de etiquetas padres*/
 --morado:#51557E;
 --lila:#816797;
 --amarillo:#FFC107;
-
 }
+/*globales*/
 html {
     font-size: 62.5%;
+    box-sizing: border-box;/*sirve para que el padding no afecte el box model*/
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 body{
     font-size: 16px;/*1rem=10px*/
     font-family: 'Krub', sans-serif; /*cambio la fuente de toda la pagina si la coloco aqui*/
@@ -22,22 +26,57 @@ body{
 /*class sirve como selector de un stilo de css en el css este se coloca con un ."nombre del selector class"*/
 /*id sirve como selector de un stilo de css en el css este se coloca con un #"nombre del selector id" a diferencia de class los id no pueden repetirse es mala practica*/
 /*se recomienda hacer mas uso de class que de id para no afectar la espicifidad de cssS*/
-.titulo {
-    text-align: center; /*text-align sirve para alinear el elemento*/
+.contenedor {/*sirve para centrar*/
+    max-width: 120rem; /*con max le indicamos el maximo de pixeles que tomara*/
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin: 0 auto 0 auto;esto es lo mismo de arriba y el orden va como las agujas del reloj*/
+    margin: 0 auto;/*es lo mismo que todo lo de arriba pero mas simplificado*/
+}
+.boton{
+    background-color: var(--lila);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;/*tamaño de la fuente*/
+    text-decoration: none;/*para sacarle la linea de abajo del link*/
+    text-transform: uppercase;/*sirve para hacer masyusculas el texto*/
+    font-weight: bold;/*fuente negrita*/
+    border-radius: 1rem;/*sirve para curvar los bordes*/
+    width: 90%;/*hace que el boton tome mas espacio en la pantalla util para moviles*/
+    text-align: center;
+}
+@media (min-width:726px) {
+    .boton{
+        width: auto;
+    }
+}
+/*Tipografia*/
+h1 {
     font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center; /*text-align sirve para alinear el elemento*/
 }
 /*el codigo es mas especifico por lo que para el css tendra mas prioridad en la cascada
 a eso se lo denomina especifidad*/
-h1.titulo span {/*ya no es recomendable usar px como propiedad sino en su lugar rem*/
-    font-size: 2rem; /*font-size sirve para darle un tamaño a la fuente*/
-    
 
-}
+/*Titulos*/
 .titulo span {/*ya no es recomendable usar px como propiedad sino en su lugar rem*/
     font-size: 2rem; /*font-size sirve para darle un tamaño a la fuente*/
     
 
 }
+
+/*Navegacion principal*/
 .nav-bg{
 background-color: var(--morado);
 }
@@ -47,15 +86,15 @@ background-color: var(--morado);
     /*align-items:normal; sirveria para centrar la flex si es una columna*/
     align-items: center;
 }
-@media (min-width: 768px) {/*con @media  indico desde que resolucion en adelante hay cambios*/
+@media (min-width: 726px) {/*con @media  indico desde que resolucion en adelante hay cambios*/
     .navegacion_principal{
         flex-direction:row;
         justify-content: space-between ;/*nos permite mover el contenido horizontalmente*/
 
     }
     
-
 }
+
 .navegacion_principal a {/*aqui uso el selector para los links*/
     display: block;
     text-align: center;
@@ -72,18 +111,30 @@ background-color: var(--morado);
     color: var(--negro);
 
 }
-.contenedor {/*sirve para centrar*/
-    max-width: 120rem; /*con max le indicamos el maximo de pixeles que tomara*/
-    /*margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin: 0 auto 0 auto;esto es lo mismo de arriba y el orden va como las agujas del reloj*/
-    margin: 0 auto;/*es lo mismo que todo lo de arriba pero mas simplificado*/
-}
 
+/*Hero*/
 .hero{
     background-image:url(../img/hero.jpg) ; /*Sirve para colocar una imagen de fondo en el contenedor */
     background-repeat: no-repeat; /*sirve para que la imagen del fondo no se repita si no abarca toda la pantalla*/
     background-size:cover ;/*sirve para que la imagen tome todo el espacio posible*/
+    height: 450px;
+    position: relative;/*hero es padre de contenido-hero entonces le damos el valor relativo*/
+   
+}
+.contenido-hero{
+    position: absolute;/*contenido-hero es hijo de hero entonces le ponemos la etiqueta de absolute*/
+    background-color:rgba(0, 0, 0, .73); /*rojo,verde,azul y transparencia del 0 al 1(color total)*/
+    /*background-color: rgb(0 0 0 / %70); esta es otra forma de agregar color y transparencia pero no tiene tanto soporte */
+    width: 100%; 
+    height: 100%;/*con esto definimos las cordenadas que tomara el background
+    lo podemos hacer tambien con top,right,buttom,left*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
 }
