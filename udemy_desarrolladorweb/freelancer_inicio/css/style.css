@@ -25,6 +25,7 @@ html {
     scroll-snap-align: center ;
     scroll-snap-stop: always;/*con esto logramos que el scroll se detenga*/
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
   }
