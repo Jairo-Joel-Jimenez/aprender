@@ -16,14 +16,14 @@ toma el valor relativo y no duplica los valores de etiquetas padres*/
 html {
     font-size: 62.5%; /*para hacer mas facil el uso de rem*/
     box-sizing: border-box;/*sirve para que el padding no afecte el box model*/
-    scroll-snap-type: y mandatory;/*con y le indicamos que hara scroll en la linea vertical y con x en la linea horizontal*/
+    scroll-snap-type: y proximity;/*con y le indicamos que hara scroll en la linea vertical y con x en la linea horizontal*/
 }
 /*scroll snap*/
 .servicios ,
 .navegacion_principal,
 .formulario{
     scroll-snap-align: center ;
-    scroll-snap-stop: always;/*con esto logramos que el scroll se detenga*/
+    scroll-snap-stop: ;/*con esto logramos que el scroll se detenga*/
 }
 
 *, *:before, *:after {
