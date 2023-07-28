@@ -9,35 +9,121 @@ toma el valor relativo y no duplica los valores de etiquetas padres*/
 --morado:#51557E;
 --lila:#816797;
 --amarillo:#FFC107;
+--amarilloclaro:#FFC95F;
+--gris:#6D6D6D;
+}
+/*globales*/
+html {
+    font-size: 62.5%; /*para hacer mas facil el uso de rem*/
+    box-sizing: border-box;/*sirve para que el padding no afecte el box model*/
+} 
+@media (min-width: 726px) {
+    html {
+    scroll-snap-type: y proximity;/*con y le indicamos que hara scroll en la linea vertical y con x en la linea horizontal*/
+}
+/*scroll snap*/
+.servicios ,
+.navegacion_principal,
+.formulario{
+    scroll-snap-align: center ;
+    scroll-snap-stop: always ;/*con esto logramos que el scroll se detenga*/
+}
 
 }
-html {
-    font-size: 62.5%;
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 body{
     font-size: 16px;/*1rem=10px*/
     font-family: 'Krub', sans-serif; /*cambio la fuente de toda la pagina si la coloco aqui*/
+    background-image: linear-gradient(to top ,#d5ccdc 0%,var(--blanco) 100%); /*Degradado para el background de la pagina*/
 }
-/*Las dos lineas de arriba sirven para hacer el uso de la propiedad rem mas facil*/
 /*class sirve como selector de un stilo de css en el css este se coloca con un ."nombre del selector class"*/
-/*id sirve como selector de un stilo de css en el css este se coloca con un #"nombre del selector id"*/
+/*id sirve como selector de un stilo de css en el css este se coloca con un #"nombre del selector id" a diferencia de class los id no pueden repetirse es mala practica*/
 /*se recomienda hacer mas uso de class que de id para no afectar la espicifidad de cssS*/
-.titulo {
-    text-align: center; /*text-align sirve para alinear el elemento*/
+.contenedor {/*sirve para centrar*/
+    max-width: 120rem; /*con max le indicamos el maximo de pixeles que tomara*/
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin: 0 auto 0 auto;esto es lo mismo de arriba y el orden va como las agujas del reloj*/
+    margin: 0 auto;/*es lo mismo que todo lo de arriba pero mas simplificado*/
+}
+.boton{
+    background-color: var(--lila);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;/*tamaño de la fuente*/
+    text-decoration: none;/*para sacarle la linea de abajo del link*/
+    text-transform: uppercase;/*sirve para hacer masyusculas el texto*/
+    font-weight: bold;/*fuente negrita*/
+    border-radius: 1rem;/*sirve para curvar los bordes*/
+    width: 90%;/*hace que el boton tome mas espacio en la pantalla util para moviles*/
+    text-align: center;
+    border: none;
+}
+@media (min-width:726px) {
+    .boton{
+        width: auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 1px rgba(117,117,117,0.49);
+    -moz-box-shadow: 0px 5px 15px 1px rgba(117,117,117,0.49);
+    box-shadow: 0px 5px 15px 1px rgba(117,117,117,0.49);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+/*Tipografia*/
+h1 {
     font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center; /*text-align sirve para alinear el elemento*/
 }
 /*el codigo es mas especifico por lo que para el css tendra mas prioridad en la cascada
 a eso se lo denomina especifidad*/
-h1.titulo span {/*ya no es recomendable usar px como propiedad sino en su lugar rem*/
-    font-size: 2rem; /*font-size sirve para darle un tamaño a la fuente*/
-    
 
-}
+/*Titulos*/
 .titulo span {/*ya no es recomendable usar px como propiedad sino en su lugar rem*/
     font-size: 2rem; /*font-size sirve para darle un tamaño a la fuente*/
     
 
 }
+/*utilidades*/
+.w-100{
+    width: 100%;
+}
+@media (min-width: 726px) {
+    .w-100{
+        width: auto;
+    }
+    
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+    margin-top: 3rem;
+}
+
+
+/*Navegacion principal*/
 .nav-bg{
 background-color: var(--morado);
 }
@@ -45,16 +131,17 @@ background-color: var(--morado);
     display: flex; /*Esto nos habilita flexbox .siempre hay que ir al elemento padre de lo que queremos alinear*/
     flex-direction:column ;/*sirve para darle direccion a la flexbox row para fila(horizontal) o column para columna(vertical) */
     /*align-items:normal; sirveria para centrar la flex si es una columna*/
+    align-items: center;
 }
-@media (min-width: 768px) {/*con @media  indico desde que resolucion en adelante hay cambios*/
+@media (min-width: 726px) {/*con @media  indico desde que resolucion en adelante hay cambios*/
     .navegacion_principal{
         flex-direction:row;
         justify-content: space-between ;/*nos permite mover el contenido horizontalmente*/
 
     }
     
-
 }
+
 .navegacion_principal a {/*aqui uso el selector para los links*/
     display: block;
     text-align: center;
@@ -71,12 +158,122 @@ background-color: var(--morado);
     color: var(--negro);
 
 }
-.contenedor {/*sirve para centrar*/
-    max-width: 120rem; /*con max le indicamos el maximo de pixeles que tomara*/
-    /*margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin: 0 auto 0 auto;esto es lo mismo de arriba y el orden va como las agujas del reloj*/
-    margin: 0 auto;/*es lo mismo que todo lo de arriba pero mas simplificado*/
+
+/*Hero*/
+.hero{
+    background-image:url(../img/hero.jpg) ; /*Sirve para colocar una imagen de fondo en el contenedor */
+    background-repeat: no-repeat; /*sirve para que la imagen del fondo no se repita si no abarca toda la pantalla*/
+    background-size:cover ;/*sirve para que la imagen tome todo el espacio posible*/
+    height: 450px;
+    position: relative;/*hero es padre de contenido-hero entonces le damos el valor relativo*/
+    margin-bottom: 2rem;
+}
+.contenido-hero{
+    position: absolute;/*contenido-hero es hijo de hero entonces le ponemos la etiqueta de absolute*/
+    background-color:rgba(0, 0, 0, .73); /*rojo,verde,azul y transparencia del 0 al 1(color total)*/
+    /*background-color: rgb(0 0 0 / %70); esta es otra forma de agregar color y transparencia pero no tiene tanto soporte */
+    width: 100%; 
+    height: 100%;/*con esto definimos las cordenadas que tomara el background
+    lo podemos hacer tambien con top,right,buttom,left*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+/*servicios*/
+@media (min-width: 726px) {
+    .servicios{
+        display: grid;/*grid es una matriz de 2 dimensiones a diferencia de flex que es lineal 1dimension columna o fila*/
+        /*grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 800px; es lo mismo que la linea de abajo*/
+        /*grid: 200px 800px/ 300px 300px;*/
+        grid-template-columns: 1fr 1fr 1fr;/*aqui coloco 3 columnas y 1fr le da una fraccion del espacio a cada columna tambien se puede hacer con porcentajes*/
+        column-gap: 2rem; /*Es la separacion que hay entre las columnas del grid*/
+    }        
+}
+.servicio{
+    display: flex;
+    flex-direction: column;/*cambio la direccion de la flexbox a columnas*/
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--lila);
+    font-weight: normal;
+}
+.servicio p {
+    line-height: 2;/*sirve para dar mas separacion al internelineado palabras*/
+    text-align: center;
+}
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color:var(--amarilloclaro);
+    border-radius: 50%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+/*Formulario de contacto*/
+.formulario{
+    background-color: var(--gris);
+    width:min(60rem, 80%);/*Utiliza el valor mas pequeño*/
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--amarilloclaro);
+}
+@media (min-width: 726px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){/*con nth-child selecciono lo que tenga la misma clase pero en la posicion en que este el elemento en este caso el (1)*/
+        grid-column: 1/3;/*con esto le decimos que elemento tiene que ir desde la columna 1 hasta la columna 3*/
+
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;/*uso block para que tome todo el espacio disponibles*/
+}
+.campo textarea {
+    height: 20rem;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.enviar .boton {
+    width: 100%;
+    margin-top: 3rem;
+}
+.footer {
+    text-align: center;
 }
