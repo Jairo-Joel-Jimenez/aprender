@@ -8,3 +8,7 @@ responsively para media queries:+
 https://responsively.app/
 Documentacion de box model:
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+Netlify(para publicar las paginas gratis sin publicidad):
+https://www.netlify.com/?attr=homepage-modal
+Convertidor de iconos para el favicon:
+https://convertico.com/es/#google_vignette

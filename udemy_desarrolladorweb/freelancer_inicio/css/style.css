@@ -9,15 +9,31 @@ toma el valor relativo y no duplica los valores de etiquetas padres*/
 --morado:#51557E;
 --lila:#816797;
 --amarillo:#FFC107;
+--amarilloclaro:#FFC95F;
+--gris:#6D6D6D;
 }
 /*globales*/
 html {
     font-size: 62.5%; /*para hacer mas facil el uso de rem*/
     box-sizing: border-box;/*sirve para que el padding no afecte el box model*/
+} 
+@media (min-width: 726px) {
+    html {
+    scroll-snap-type: y proximity;/*con y le indicamos que hara scroll en la linea vertical y con x en la linea horizontal*/
 }
+/*scroll snap*/
+.servicios ,
+.navegacion_principal,
+.formulario{
+    scroll-snap-align: center ;
+    scroll-snap-stop: always ;/*con esto logramos que el scroll se detenga*/
+}
+
+}
+
 *, *:before, *:after {
     box-sizing: inherit;
-  }
+}
 body{
     font-size: 16px;/*1rem=10px*/
     font-family: 'Krub', sans-serif; /*cambio la fuente de toda la pagina si la coloco aqui*/
@@ -47,11 +63,15 @@ body{
     border-radius: 1rem;/*sirve para curvar los bordes*/
     width: 90%;/*hace que el boton tome mas espacio en la pantalla util para moviles*/
     text-align: center;
+    border: none;
 }
 @media (min-width:726px) {
     .boton{
         width: auto;
     }
+}
+.boton:hover {
+    cursor: pointer;
 }
 .sombra {
     -webkit-box-shadow: 0px 5px 15px 1px rgba(117,117,117,0.49);
@@ -84,6 +104,24 @@ a eso se lo denomina especifidad*/
     
 
 }
+/*utilidades*/
+.w-100{
+    width: 100%;
+}
+@media (min-width: 726px) {
+    .w-100{
+        width: auto;
+    }
+    
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+    margin-top: 3rem;
+}
+
 
 /*Navegacion principal*/
 .nav-bg{
@@ -146,4 +184,96 @@ background-color: var(--morado);
 .contenido-hero h2,
 .contenido-hero p{
     color: var(--blanco);
+}
+
+/*servicios*/
+@media (min-width: 726px) {
+    .servicios{
+        display: grid;/*grid es una matriz de 2 dimensiones a diferencia de flex que es lineal 1dimension columna o fila*/
+        /*grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 800px; es lo mismo que la linea de abajo*/
+        /*grid: 200px 800px/ 300px 300px;*/
+        grid-template-columns: 1fr 1fr 1fr;/*aqui coloco 3 columnas y 1fr le da una fraccion del espacio a cada columna tambien se puede hacer con porcentajes*/
+        column-gap: 2rem; /*Es la separacion que hay entre las columnas del grid*/
+    }        
+}
+.servicio{
+    display: flex;
+    flex-direction: column;/*cambio la direccion de la flexbox a columnas*/
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--lila);
+    font-weight: normal;
+}
+.servicio p {
+    line-height: 2;/*sirve para dar mas separacion al internelineado palabras*/
+    text-align: center;
+}
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color:var(--amarilloclaro);
+    border-radius: 50%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+/*Formulario de contacto*/
+.formulario{
+    background-color: var(--gris);
+    width:min(60rem, 80%);/*Utiliza el valor mas pequeño*/
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--amarilloclaro);
+}
+@media (min-width: 726px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){/*con nth-child selecciono lo que tenga la misma clase pero en la posicion en que este el elemento en este caso el (1)*/
+        grid-column: 1/3;/*con esto le decimos que elemento tiene que ir desde la columna 1 hasta la columna 3*/
+
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;/*uso block para que tome todo el espacio disponibles*/
+}
+.campo textarea {
+    height: 20rem;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.enviar .boton {
+    width: 100%;
+    margin-top: 3rem;
+}
+.footer {
+    text-align: center;
 }
