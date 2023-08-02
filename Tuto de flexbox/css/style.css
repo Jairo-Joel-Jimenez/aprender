@@ -53,11 +53,15 @@ p {
     border: solid .1rem var(--amarillo);
     margin-top: 1rem;
     border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .navegacion-principal{
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
+    align-items: center;
 }
 .navegacion-principal a {
     display: block;
@@ -66,6 +70,15 @@ p {
     text-decoration: none;
     font-size: 3rem;
     font-weight: bold;
+    padding: 1rem;
+}
+.navback h3 {
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight:bold;
     padding: 1rem;
 }
 /* contenedor para maquetar una flexbox de ejemplo */
@@ -164,4 +177,105 @@ p {
     flex-direction: row; /*le damos direccion a la flexbox row para fila column para columnas*/
     justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
     align-items: stretch;/*sirve para que el elemento ocupe todo el espacio vertical en la flexbox*/
+}
+.flex-contenedor-1-10{
+    /*Align-items sirve para alinear los elementos dentro de la flexbox*/
+    display: flex;/*Habilita la flexbox*/
+    flex-direction: row; /*le damos direccion a la flexbox row para fila column para columnas*/
+    flex-wrap: wrap;
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: baseline;/**/
+}
+.flex-contenedor-1-12{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: flex-start;
+}
+.flex-contenedor-1-13{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: flex-end;
+}
+.flex-contenedor-1-14{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: stretch;
+}
+.flex-contenedor-1-15{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: space-between;/*space-between: indica que las filas se separarán entre sí, dejando un espacio proporcional entre ellas.*/
+}
+.flex-contenedor-1-16{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: space-around;
+}
+.flex-contenedor-1-17{
+    display: flex;/*Habilita la flexbox*/
+    height: 20rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: flex-start;
+    align-content: space-around;
+
+}
+.elemento1-order{
+    height: 100px;
+    order:5;
+    
+}
+.elemento2-order{
+    height: 150px;
+    order:-5;
+}
+.elemento3-order{
+    height: 100px;
+    order:0;
+}
+.flex-contenedor-1-18{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: flex-start;
+}
+.elemento1-self{
+    height: 100px;
+}
+.elemento2-self{
+    height: 150px;
+}
+.elemento3-self{
+    height: 100px;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid .3rem var(--amarillo);
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.footer small,
+.footer a {
+    color: var(--naranja);
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
 }
