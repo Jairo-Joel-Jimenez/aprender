@@ -13,6 +13,9 @@ body {
     font-size: 3rem;
     background-color: var(--gris-oscuro);
 }
+html, body{
+    scroll-behavior: smooth; /*Sirve para suavizar el scrolleo cuando apreto un link a un atajo dentro de la pagina */
+}
 h1{
     font-size: 5rem;
     text-align: center;
@@ -20,6 +23,13 @@ h1{
     font-weight: bold;
     text-transform: uppercase;
 }
+pre a {
+    text-align: start;
+    color:var(--naranja);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 pre{
     color: white;
     border: solid .2rem var(--amarillo);
@@ -29,12 +39,6 @@ pre{
     word-wrap: break-word;
     text-align: justify;
 
-}
-pre a {
-    text-align: start;
-    color:var(--naranja);
-    text-decoration: none;
-    font-weight: bold;
 }
 
 section h2 {
@@ -226,6 +230,7 @@ p {
     align-items: center;
     align-content: space-around;
 }
+/* Propiedad order */
 .flex-contenedor-1-17{
     display: flex;/*Habilita la flexbox*/
     height: 20rem;
@@ -248,6 +253,7 @@ p {
     height: 100px;
     order:0;
 }
+/* Propiedad align self */
 .flex-contenedor-1-18{
     display: flex;/*Habilita la flexbox*/
     height: 50rem;
@@ -257,13 +263,19 @@ p {
 }
 .elemento1-self{
     height: 100px;
+    align-self: flex-end;/*sirve para posicionar el elemento 1 en la parte inferior de la flexbox*/
 }
 .elemento2-self{
     height: 150px;
+    align-self: center;
 }
 .elemento3-self{
     height: 100px;
 }
+.span-self{
+    color: var(--amarillo);
+}
+/* Pie de pagina footer */
 .footer{
     display: flex;
     justify-content: space-evenly;
