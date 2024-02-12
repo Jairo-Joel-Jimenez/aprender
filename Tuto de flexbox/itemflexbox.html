@@ -12,11 +12,85 @@
             Documentacion:<a href="https://desarrolloweb.com/manuales/manual-flexbox-css.html " target="_blank">Manual de flexbox</a>
             video recomendado:<a href="https://www.youtube.com/watch?v=BIXgEpITld4" target="_blank">CSS Flexbox | Guía completa DESDE CERO</a>
     </pre>
+    <a name="indice" />
     <div class="navback">
         <nav class="navegacion-principal">
             <a href="index.html">Inicio</a>
             <a href="itemflexbox.html">Propiedades de items flexbox</a>
         </nav>
     </div>
+    <div class="navback">
+        <h3>Indice:</h3>
+        <div class="navegacion-principal">
+            <a href="#flex-grow">Flex-grow</a>
+            <a href="#flex-shrink">Flex-shrink</a>
+            <a href="#order">Order</a>
+            <a href="#flex-basis">Flex-basis</a>
+            <a href="#img-resumen">Resumen</a>
+        </div>
+    </div>
+    <section>
+
+        <h2>Propiedades de los items de flexbox</h2>
+        <p>Los items son los hijos directos de los contenedores de flexbox</p>
+        <div>
+            <a name="flex-grow"/>
+            <h2>Flex-grow</h2>
+            <p>La propiedad flex-grow sirve para decir cómo deben crecer los elementos incluidos en el contenedor, es decir, cómo distribuir el espacio entre ellos, haciendo que ocupen más o menos espacio. El valor que acepta es numérico e indica la proporción de espacio que va a ocupar. </p>
+            <p>Los elementos con flex-grow: 2 ocupan el doble de espacio que los elementos con flex-grow: 1.
+                El elemento con flex-grow: 3 ocupa el triple de espacio que los elementos con flex-grow: 1.</p>
+            <div class="contenedor flex-contenedor-grow-1">
+                <div class="elemento1-flexgrow">elemento1</div>
+                <div class="elemento2-flexgrow">elemento2</div>
+                <div class="elemento3-flexgrow">elemento3</div>
+            </div>
+        </div><!--Fin de flex-grow-->
+        <div>
+            <a name="flex-shrink"/>
+            <h2>Flex-shrink</h2>
+            <p>Sirve para indicar que ciertos ítems deben encoger su tamaño. El valor predeterminado de flex-shrink es de 1. Cualquier valor superior indica que ese elemento se encogerá con respecto a lo que ocuparía si no tuviera esa propiedad. A mayor valor de flex-shrink, más reducido será el tamaño resultante del elemento.</p>
+            <div class="contenedor flex-contenedor-shrink-1">
+                <div class="elemento1-flexshrink">elemento1</div>
+                <div class="elemento2-flexshrink">elemento2</div>
+                <div class="elemento3-flexshrink">elemento3</div>
+            </div>
+        </div><!--Fin de flex-shrink-->
+        <div>
+            <a name="order"/>
+            <h2>Order</h2>
+            <p>Order sirve para acomodar los elementos dentro de la flex box en el orden que nos sea coveniente.</p>
+            <p>El orden incluye numeros negativos ejemplo de sintaxis order -5 (ira primero) order:5(estara al final).</p>
+            <p>En el siguiente ejemplo el elemento1 tiene un orden 5,el elemento2 tiene orden -5,el elemento3 tiene orden 0.</p>
+            <div class="contenedor flex-contenedor-1-17 align">
+                <div class="elemento1-order">elemento1</div>
+                <div class="elemento2-order">elemento2</div>
+                <div class="elemento3-order">elemento3</div>
+            </div>
+            
+        </div> <!--fin de order-->
+        <div>
+            <a name="flex-basis">
+                <h2>Flex basis</h2>
+                <p> Esta propiedad sirve para definir el tamaño predeterminado de un elemento, pero antes de que el espacio sobrante sea distribuido, cuando proceda, por causa de otras propiedades como flex-grow.</p>
+                <ul class="contenedor-flexbasis">
+                    <li class="elemento1-flexbasis flex-contenedor-1-20">Flex-basis text</li>
+                    <li class="elemento2-flexbasis flex-contenedor-1-20">Flex-basis text</li>
+                    <li class="elemento3-flexbasis flex-contenedor-1-20">Flex-basis text</li>
+                    <li class="elemento4-flexbasis flex-contenedor-1-20">Flex-basis text</li>
+                    <li class="elemento5-flexbasis flex-contenedor-1-20">Flex-basis text</li>
+                    <li class="elemento6-flexbasis flex-contenedor-1-20">Flex-basis text</li>
+                </ul>
+        </div><!--Fin de flex-basis-->
+        <div class="img-flexbox-resumen">
+            <a name="img-resumen"/>
+            <h2>Imagen de resumen</h2>
+            <img src="img/css flexbox tricks.jfif" alt="Imagen-resumen-flexbox">
+        </div><!--Fin de la imagen resumen-->
+
+    </section>
+    <footer class="footer">
+        <small>&copy;Todos los derechos reservados a Joel developer</small>
+        <a href="#indice">Volver al Indice</a>
+    </footer>
 </body>
 </html>

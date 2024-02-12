@@ -8,107 +8,245 @@
     <title>Flexbox</title>
 </head>
 <body>
-    <header><h1>flexbox</h1></header>
-    <pre>Links de la documentacion usada para hacer esta pagina teorica-practica
-            Documentacion:<a href="https://desarrolloweb.com/manuales/manual-flexbox-css.html " target="_blank">Manual de flexbox</a>
-            video recomendado:<a href="https://www.youtube.com/watch?v=BIXgEpITld4" target="_blank">CSS Flexbox | Guía completa DESDE CERO</a>
-    </pre>
+    <header>
+        <h1>flexbox</h1>
+    </header>
+    <section>
+        <pre>
+            Links de la documentacion usada para hacer esta pagina teorica-practica 
+            Documentacion:<a href="https://desarrolloweb.com/manuales/manual-flexbox-css.html " target="_blank"> Manual de flexbox</a>
+            Video recomendado:<a href="https://www.youtube.com/watch?v=BIXgEpITld4" target="_blank"> CSS Flexbox | Guía completa DESDE CERO</a>
+            Video recomendado: <a href="https://www.youtube.com/watch?v=EVBlLkfh2V0" target="_blank">GUÍA COMPLETA DE FLEXBOX ANIMADA | CSS</a>
+        </pre>
+    </section>
+    <a name="indice"/>
     <div class="navback">
         <nav class="navegacion-principal">
             <a href="index.html">Inicio</a>
             <a href="itemflexbox.html">Propiedades de items flexbox</a>
         </nav>
     </div>
+    <div class="navback">
+        <h3>Indice:</h3>
+        <div class="navegacion-principal">
+            <a href="#flex-direction">Flex-direction</a>
+            <a href="#Justify-content">Justify-content</a>
+            <a href="#Align-items">Align-items</a>
+            <a href="#Align-content">Align-content</a>
+            <a href="#Align-self">Align-self</a>
+        </div>
+    </div>
     <section>
-        <h2>Conceptos y propiedades basicos de una flexbox</h2>
-        <h2>flex-direction:row</h2>
+        <h2>Conceptos y propiedades para los contenedores de flexbox</h2>
+        <a name="flex-direction"/>
+        <h2>Flex-direction:row</h2>
+        <p>row (valor predeterminado): Indica que los elementos se colocan en una fila, uno al lado del otro, de izquierda a derecha</p>
         <p>flex-wrap:sirve para que los elementos se acomoden segun se queden sin espacio</p>
         <div class="contenedor flex-contenedor-1">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>row-reverse</h2>
+        <p>row-reverse: se colocan en una fila, pero con orden de derecha a izquierda.</p>
         <div class="contenedor flex-contenedor-2">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>column</h2>
+        <p>column: se colocan uno debajo del otro, en orden los primeros arriba.</p>
         <div class="contenedor flex-contenedor-3">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>column-reverse</h2>
+        <p>column-reverse: se colocan en una columna, pero los primeros aparecerán abajo.</p>
         <div class="contenedor flex-contenedor-4">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
-        <h2>flex-direction:row</h2>
+        <a name="Justify-content"/>
+        <h2>Justify-content</h2>
+        <p>Esta propiedad es muy útil para indicar cómo se van a colocar los justificados y márgenes de los ítems. Puedes indicar que vayan a justificados al inicio del eje o al final del eje o que a la hora de distribuirse se coloque un espacio entre ellos o un espacio entre ellos y los bordes.</p>
         <h2>Justify-content:flex-start</h2>
-        <p>Justify-content sirve para alinear los elementos en el eje horizontal dentro de flexbox</p>
+        <p>flex-start: Añade los elementos a partir del inicio del eje principal.</p>
         <div class="contenedor flex-contenedor-1-1">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>Justify-content:flex-end</h2>
+        <p>flex-end: Añade los elementos a partir del final del eje principal.</p>
         <div class="contenedor flex-contenedor-1-2">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>Justify-content:center</h2>
+        <p>center: los elementos se centran en el espacio del contenedor, siempre con respecto al eje principal.</p>
         <div class="contenedor flex-contenedor-1-3">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>Justify-content:space-between</h2>
+        <p>space-between: hace que los elementos se distribuyan con un espacio proporcional entre ellos, siendo que los ítem de los extremos se sitúan en el borde del contenedor.</p>
         <div class="contenedor flex-contenedor-1-4">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>Justify-content:space-around</h2>
+        <p>space-around: es parecido a space-between en el sentido de dejar un espaciado proporcional, sin embargo, en esta ocasión se deja también espacio entre el borde del contenedor y los ítem de los extremos</p>
         <div class="contenedor flex-contenedor-1-5">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>Justify-content:space-evenly</h2>
+        <p>los elementos se repartirán el espacio sobrante de su contenedor de igual manera a todos sus costados. Es decir que habrá el mismo espacio al inicio y al final que en el medio de los elementos.</p>
         <div class="contenedor flex-contenedor-1-6">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
-        <h2>Align-items:flex-start</h2>
+        <a name="Align-items"/>
+        <h2>Align-items</h2>
         <p>Align-items sirve para alinear los elementos en el eje vertical en flexbox</p>
+        <h2>Align-items:flex-start</h2>
+        <p>flex-start: los elementos se sitúan al principio de la dirección secundaria (es decir, arriba si la dirección secundaria es vertical).</p>
         <div class="contenedor flex-contenedor-1-7 align">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>Align-items:flex-end</h2>
+        <p>flex-end: los elementos se sitúan al final de la dirección secundaria (es decir, abajo si la dirección secundaria es vertical).</p>
         <div class="contenedor flex-contenedor-1-8 align">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>Align-items:center</h2>
+        <p>center: los elementos se sitúan en el centro de la dirección secundaria (es decir, en medio si la dirección secundaria es vertical).</p>
         <div class="contenedor flex-contenedor-1-9 align">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
         <h2>Align-items:stretch</h2>
+        <p>stretch: esta opción hace que los elementos ocupen todo el espacio del eje secundario. Si tenemos el valor por defecto de eje, los elementos se alargarían al alto total de su contenedor, pues el eje vertical es el eje transversal</p>
         <div class="contenedor flex-contenedor-1-10 align">
-            <div class="con-1">elemento1</div>
-            <div class="con-2">elemento3</div>
-            <div class="con-3">elemento2</div>
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
         </div>
+        <h2>Align-items:baseline</h2>
+        <p>baseline: esta opción hace que los elementos se compriman al tamaño de texto y se dispongan teniendo como base la línea inferior del texto. Esto hace que elementos de distintos tamaños se posicionen en función de la misma medida inicial, creando orden dentro del caos. Con esta opción podrías, por ejemplo, hacer un cuadro de Mondrian.</p>
+        <div class="contenedor flex-contenedor-1-11 align">
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
+        </div>
+        
+        <a name="Align-content" />
+        <h2>Align-content:flex-start</h2>
+        <p>flex-start: indica que las filas se colocarán todas pegadas entre sí (obviamente no aparecerán exactamente pegadas si le hemos colocado un margin), desde el inicio del eje secundario.</p>
+        <div class="contenedor flex-contenedor-1-12 align">
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
+            <div >elemento4</div>
+            <div >elemento5</div>
+            <div >elemento6</div>
+            <div >elemento7</div>
+            <div >elemento8</div>
+            <div >elemento9</div>
+        </div>
+        <h2>Align-content:flex-end</h2>
+        <p>flex-end: las filas se colocarán pegadas entre sí, pero esta vez pegadas al final del eje secundario.
+            center: se posicionarán en el centro del eje secundario, pegadas entre sí.</p>
+        <div class="contenedor flex-contenedor-1-13 align">
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
+            <div >elemento4</div>
+            <div >elemento5</div>
+            <div >elemento6</div>
+            <div >elemento7</div>
+            <div >elemento8</div>
+            <div >elemento9</div>
+        </div>
+        <h2>Align-content:stretch</h2>
+        <p>stretch: Sus dimensiones crecerán para ocupar todo el espacio disponible (a no ser que se haya colocado una dimensión diferente en los elementos).</p>
+        <div class="contenedor flex-contenedor-1-14 align">
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
+            <div >elemento4</div>
+            <div >elemento5</div>
+            <div >elemento6</div>
+            <div >elemento7</div>
+            <div >elemento8</div>
+            <div >elemento9</div>
+        </div>
+        <h2>Align-content:space-between</h2>
+        <p>space-between: indica que las filas se separarán entre sí, dejando un espacio proporcional entre ellas.</p>
+        <div class="contenedor flex-contenedor-1-15 align">
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
+            <div >elemento4</div>
+            <div >elemento5</div>
+            <div >elemento6</div>
+            <div >elemento7</div>
+            <div >elemento8</div>
+            <div >elemento9</div>
+        </div>
+        <h2>Align-content:space-around</h2>
+        <p>space-around: indica que las filas se separarán, dejando un espacio entre ellas proporcional, también con el borde.</p>
+        <div class="contenedor flex-contenedor-1-16 align">
+            <div >elemento1</div>
+            <div >elemento2</div>
+            <div >elemento3</div>
+            <div >elemento4</div>
+            <div >elemento5</div>
+            <div >elemento6</div>
+            <div >elemento7</div>
+            <div >elemento8</div>
+            <div >elemento9</div>
+        </div>
+
+        <a name="Align-self"/>
+        <h2>Align-self</h2>
+        <p>Sirve para posicionar un elemento en particular</p>
+        <p>La propiedad align-self de Flexbox nos permite sobrescribir la alineación de un elemento dentro de un contenedor flex, sea la alineación por defecto del navegador o la alineación especificada para los elementos en la propiedad align-items. Esto quiere decir que podemos ignorar la alineación determinada de un elemento en concreto para alinearlo de otra manera dentro del contenedor.</p>
+        <p>En este caso <span class="span-self">elemento1</span>=Align-self:flex-end,<span class="span-self">elemento2</span>=Align-self:center,<span class="span-self">elemento3</span>=Align-self:flex-start.</p>
+        <div class="contenedor flex-contenedor-1-18 align">
+            <div class="elemento1-self">elemento1</div>
+            <div class="elemento2-self">elemento2</div>
+            <div class="elemento3-self">elemento3</div>
+            <div class="elemento4-self">elemento4</div>
+
+        </div>
+        <h2>Align-self margin auto</h2>
+        <p>Sirve para dejar espacio entre los elementos</p>
+        <p>En este caso en el <span class="span-self">elemento2:</span> hay un margin-left:auto lo que es util para hacer nav</p>
+        <div class="contenedor flex-contenedor-1-19 align">
+            <div class="elemento1-self-margin">elemento1</div>
+            <div class="elemento2-self-margin">elemento2</div>
+            <div class="elemento3-self-margin">elemento3</div>
+        </div>
+        
+
+
     </section>
+    <footer class="footer">
+        <small>&copy;Todos los derechos reservados a Joel developer</small>
+        <a href="#indice">Volver al Indice</a>
+    </footer>
 </body>
 </html>

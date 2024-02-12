@@ -13,6 +13,9 @@ body {
     font-size: 3rem;
     background-color: var(--gris-oscuro);
 }
+html, body{
+    scroll-behavior: smooth; /*Sirve para suavizar el scrolleo cuando apreto un link a un atajo dentro de la pagina */
+}
 h1{
     font-size: 5rem;
     text-align: center;
@@ -20,6 +23,13 @@ h1{
     font-weight: bold;
     text-transform: uppercase;
 }
+pre a {
+    text-align: start;
+    color:var(--naranja);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 pre{
     color: white;
     border: solid .2rem var(--amarillo);
@@ -27,14 +37,8 @@ pre{
     margin:0;
     white-space: pre-wrap;
     word-wrap: break-word;
-    text-align: justify;
+    text-align: left;
 
-}
-pre a {
-    text-align: start;
-    color:var(--naranja);
-    text-decoration: none;
-    font-weight: bold;
 }
 
 section h2 {
@@ -53,19 +57,33 @@ p {
     border: solid .1rem var(--amarillo);
     margin-top: 1rem;
     border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .navegacion-principal{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content:space-evenly;
+    align-items: center;
 }
 .navegacion-principal a {
     display: block;
     text-align: center;
     color: var(--naranja);
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    padding: 1rem;
+}
+.navback h3 {
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight:bold;
     padding: 1rem;
 }
 /* contenedor para maquetar una flexbox de ejemplo */
@@ -164,4 +182,283 @@ p {
     flex-direction: row; /*le damos direccion a la flexbox row para fila column para columnas*/
     justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
     align-items: stretch;/*sirve para que el elemento ocupe todo el espacio vertical en la flexbox*/
+}
+.flex-contenedor-1-11{
+    /*Align-items sirve para alinear los elementos dentro de la flexbox*/
+    display: flex;/*Habilita la flexbox*/
+    flex-direction: row; /*le damos direccion a la flexbox row para fila column para columnas*/
+    flex-wrap: wrap;
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: baseline;/**/
+}
+.flex-contenedor-1-12{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: flex-start;
+}
+.flex-contenedor-1-13{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: flex-end;
+}
+.flex-contenedor-1-14{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: stretch;
+}
+.flex-contenedor-1-15{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: space-between;/*space-between: indica que las filas se separarán entre sí, dejando un espacio proporcional entre ellas.*/
+}
+.flex-contenedor-1-16{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: center;
+    align-content: space-around;
+}
+/* Propiedad order */
+.flex-contenedor-1-17{
+    display: flex;/*Habilita la flexbox*/
+    height: 20rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: flex-start;
+    align-content: space-around;
+
+}
+.elemento1-order{
+    height: 100px;
+    order:5;
+    
+}
+.elemento2-order{
+    height: 150px;
+    order:-5;
+}
+.elemento3-order{
+    height: 100px;
+    order:0;
+}
+
+/* Propiedad align self */
+.flex-contenedor-1-18{
+    display: flex;/*Habilita la flexbox*/
+    height: 50rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: flex-start;
+
+}
+.elemento1-self{
+    height: 100px;
+    align-self: flex-end;/*sirve para posicionar el elemento 1 en la parte inferior de la flexbox*/
+}
+.elemento2-self{
+    height: 150px;
+    align-self: center;
+}
+.elemento3-self{
+    height: 100px;
+}
+.elemento4-self{
+    height: 100px;
+    align-self: flex-end;
+}
+.span-self{
+    color: var(--amarillo);
+}
+.flex-contenedor-1-19{
+    display: flex;/*Habilita la flexbox*/
+    height: 30rem;
+    flex-flow: row wrap;/*es la forma abreviada de usar flexdirection y flex-wrap*/
+    justify-content: space-around;/*el espacio se distribuye alrededor de los elementos de forma pareja*/
+    align-items: flex-start;}
+
+    .elemento1-self-margin{
+        height: 100px;
+    }
+    .elemento2-self-margin{
+        height: 150px;
+        margin-left: auto;
+    }
+    .elemento3-self-margin{
+        height: 100px;
+    }
+
+    .span-self{
+        color: var(--amarillo);
+    }
+
+/* Flex-basis */
+    .contenedor-flexbasis {
+        font-family: Arial, Helvetica, sans-serif
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: var(--gris-claro);
+        border-radius: 1rem;
+        border: solid .2rem var(--amarillo) ;
+    }
+    
+    .flex-contenedor-1-20 {
+        padding: 5rem;
+        margin-bottom: 5rem;
+        margin-left: 1rem;
+        background: var(--naranja);
+        border-radius: 1rem;
+        border: solid .2rem var(--negro);
+        font-size: 2rem;
+        text-align: center;
+        position: relative;
+
+    }
+    
+    .flex-contenedor-1-20:after {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 100%;
+        margin-top: 10px;
+        width: 100%;
+        color: #333;
+        font-size: 18px;
+    }
+    
+    .elemento1-flexbasis {
+        flex-basis: auto;
+    }
+    
+    .elemento1-flexbasis:after {
+        content: "auto";
+    }
+    
+    .elemento2-flexbasis {
+        flex-basis: -webkit-max-content;
+        flex-basis: -moz-max-content;
+        flex-basis: max-content;
+    }
+    
+    .elemento2-flexbasis:after {
+        content: "max-content";
+    }
+    
+    .elemento3-flexbasis {
+        flex-basis: -webkit-min-content;
+        flex-basis: -moz-min-content;
+        flex-basis: min-content;
+    }
+    
+    .elemento3-flexbasis:after {
+        content: "min-content";
+    }
+    
+    .elemento4-flexbasis{
+        flex-basis: -webkit-fit-content;
+        flex-basis: -moz-fit-content;
+        flex-basis: fit-content;
+    }
+    
+    .elemento4-flexbasis:after {
+        content: "fit-content";
+    }
+    
+    .elemento5-flexbasis {
+        flex-basis: content;
+    }
+    
+    .elemento5-flexbasis:after {
+        content: "content";
+    }
+    
+    .elemento6-flexbasis {
+        flex-basis: -webkit-fill-available;
+        flex-basis: -moz-available;
+        flex-basis: fill;
+    }
+    
+    .elemento6-flexbasis:after {
+        content: "fill/-webkit-fill-available/-moz-available";
+    }
+/* Flex-grow */
+.flex-contenedor-grow-1{
+    
+        display: flex;/*Habilita la flexbox*/
+        height: 30rem;
+        text-align: center;
+}
+.elemento1-flexgrow{
+    height: 100px;
+    flex-grow: 1;
+}
+.elemento2-flexgrow{
+    height: 100px;
+    flex-grow: 2;
+}
+.elemento3-flexgrow{
+    height: 100px;
+    flex-grow: 3;
+}
+/* Flex-shrink */
+.flex-contenedor-shrink-1{
+    
+        display: flex;/*Habilita la flexbox*/
+        height: 30rem;
+        text-align: center;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+}
+.elemento1-flexshrink{
+    height: 100px;
+    width: 200px;
+    flex-basis: auto;
+    flex-shrink: 1;
+}
+.elemento2-flexshrink{
+    height: 100px;
+    width: 200px;
+    flex-shrink: 2;
+}
+.elemento3-flexshrink{
+    height: 100px;
+    width: 200px;
+    flex-shrink: 1;
+}
+/* Imagen de resumen */
+.img-flexbox-resumen{
+    display: block;
+    text-align: center;
+}
+/* Pie de pagina footer */
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid .3rem var(--amarillo);
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.footer small,
+.footer a {
+    color: var(--naranja);
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
 }
